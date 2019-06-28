@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-git config user.email "EliseyZamahov@gmail.com"
 git config --global user.name "Elisey Zamakhov"
-git config --global user.email Elisey.Zamakhov@tomtom.com
+git config --global user.email EliseyZamahov@gmail.com
 git config --global help.autocorrect true
 git config --global color.ui true
 git config --global merge.tool vimdiff
