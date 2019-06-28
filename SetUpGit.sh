@@ -3,7 +3,6 @@ git config --global user.name "Elisey Zamakhov"
 git config --global user.email EliseyZamahov@gmail.com
 git config --global help.autocorrect true
 git config --global color.ui true
-git config --global merge.tool vimdiff
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
