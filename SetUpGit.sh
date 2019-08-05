@@ -11,4 +11,5 @@ git config --global alias.last 'log -1 HEAD'
 git config --global alias.stash-unapply '! git stash show -p | git apply -R'
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.fixup "! git commit --fixup=\$(git log -1 --format=\"%H\" \$1) \$1"
+git config --global alias.fixupall "! for f in \$(git diff --name-only); do git fixup \$f; done"
 git config --list
