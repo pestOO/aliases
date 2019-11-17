@@ -1,0 +1,23 @@
+{
+	"font_size": 15,
+	"draw_white_space": "all",
+	"file_exclude_patterns":
+		[
+		"*.sublime-workspace",
+		// python related
+		"*.pyc", "*.pyo",
+		// Java
+		"*.class",
+		// C++ objects
+		"*.exe", "*.dll",
+		"*.obj","*.o", "*.a", "*.lib", "*.so",
+		"*.dylib", "*.ncb", "*.sdf", "*.suo",
+		"*.pdb", "*.idb",
+		// Android related
+		"*.apk", "*.img", "*.bin",
+		// MacOS related
+		".DS_Store",
+		// others
+		"*.psd", "*.db",
+		]
+}
