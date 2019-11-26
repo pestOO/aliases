@@ -17,6 +17,8 @@
 		"*.apk", "*.img", "*.bin",
 		// MacOS related
 		".DS_Store",
+		// images
+		"*.png", "*.jpg*",
 		// others
 		"*.psd", "*.db",
 		]
