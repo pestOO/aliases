@@ -7,14 +7,14 @@
 		// python related
 		"*.pyc", "*.pyo",
 		// Java
-		"*.class",
+		"*.class", "*.jar",
 		// C++ objects
 		"*.exe", "*.dll",
 		"*.obj","*.o", "*.a", "*.lib", "*.so",
 		"*.dylib", "*.ncb", "*.sdf", "*.suo",
 		"*.pdb", "*.idb",
 		// Android related
-		"*.apk", "*.img", "*.bin", "*.dex",
+		"*.apk", "*.img", "*.bin", "*.dex", "*.iml",
 		// MacOS related
 		".DS_Store",
 		// images
@@ -24,6 +24,7 @@
 		],
 	"folder_exclude_patterns":
 		[	".idea",
+			"Darwin/Android/sdk",
 			".git"
 		],
 }
