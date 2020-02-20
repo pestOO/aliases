@@ -19,8 +19,10 @@
 		".DS_Store",
 		// images
 		"*.png", "*.jpg*",
+		// archives
+		"*.zip", "*.rar", "*.tar", "*.7z",
 		// others
-		"*.psd", "*.db",
+		"*.psd", "*.db", "*.iso",
 		],
 	"folder_exclude_patterns":
 		[	".idea",
