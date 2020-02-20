@@ -21,8 +21,10 @@
 		"*.png", "*.jpg*",
 		// archives
 		"*.zip", "*.rar", "*.tar", "*.7z",
+		// audio-video
+		"*.mp3", "*.wav", "*.avi", "*.mkv",
 		// others
-		"*.psd", "*.db", "*.iso",
+		"*.psd", "*.db", "*.iso", "*.sqlite", "*.crt",
 		],
 	"folder_exclude_patterns":
 		[	".idea",
