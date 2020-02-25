@@ -8,7 +8,9 @@ ulimit -n 4096
 
 # personal aliases
 alias ls='ls -shlF'
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+source "`brew --prefix`/etc/grc.bashrc"
 
 # direct access to adb and Android tools
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
