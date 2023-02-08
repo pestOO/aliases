@@ -1,0 +1,11 @@
+# Rust analiser json
+rust-project.json
+# VS
+.code-workspace
+# Mac
+.DS_Store
+# Windows
+Thumbs.db
+# WebStorm
+.idea/
+# etc..
