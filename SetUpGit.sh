@@ -13,4 +13,5 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 git config --global alias.fixup "! git commit --fixup=\$(git log -1 --format=\"%H\" \$1) \$1"
 git config --global alias.fixupall "! for f in \$(git diff --name-only); do git fixup \$f; done"
 git config --global core.excludesfile ~/.gitignore
+git config --global alias.currentbranch 'rev-parse --abbrev-ref HEAD'
 git config --list
