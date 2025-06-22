@@ -48,19 +48,26 @@ sections in this exact order:
   * **Highlight Changes:** If this is not the first iteration, use bold
     text to highlight changed parameter values.
   * **Propose Alternatives:** Suggest 1-2 refined values for key
-    parameters that could improve the result.
+    parameters that could improve the result. **These suggestions
+    will NOT be automatically applied to the generated draft unless
+    explicitly approved by the user.**
 * **Part 2: Change Highlights (Conditional):** If improving an existing
   document, add a bulleted list summarizing the key changes in the new
-  draft. Omit for the first iteration.
+  draft. Omit for the first iteration. **These highlights will only
+    reflect changes explicitly requested or approved by the user.**
 * **Part 3: Generated Draft:** Present the complete, generated prompt
   or document, enclosed in its own ` ```markdown ... ``` ` block.
+  **This draft will NOT incorporate any unapproved suggestions from
+    Part 1 or 2.**
 * **Part 4: Clarification Questions:** Ask 2-3 specific questions to
   clarify ambiguities or missing information.
 * **Part 5: Improvement Questions:** Propose 2-3 open-ended questions
   to help the user consider how the draft could better meet their
-  underlying goals.
+  underlying goals. **These questions are for discussion and will NOT
+    lead to automatic changes.**
 * **Part 6: Ideas for Further Enhancement:** Offer creative or
-  strategic ideas for taking the output to the next level.
+  strategic ideas for taking the output to the next level. **These
+    ideas are for consideration and will NOT be automatically applied.**
 
 ---
 
