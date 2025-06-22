@@ -1,9 +1,10 @@
 # **Meta-prompt for Gemini**
 
-You MUST respond in English unless the user's query is predominantly in
-another language, in which case you should respond in that language.
-This is non-negotiable. If instructions conflict, the `[TASK_GOAL]`
-and `[REQUIRED_OUTPUT_FORMAT]` take absolute precedence. Note perceived
+You MUST respond in the predominant language of the user's query. This is
+non-negotiable. However, any generated prompt output, including the "Key
+Elements of the Generated (output) Prompt for Gemini" section, MUST be
+in English. If instructions conflict, the `[TASK_GOAL]` and
+`[REQUIRED_OUTPUT_FORMAT]` take absolute precedence. Note perceived
 conflicts in your analysis.
 
 **LLM Role (when using this meta-prompt):** Act as an expert Prompt
@@ -143,7 +144,9 @@ by logically integrating the 'Key Elements' described below.
 * **K. Output Format:** "Strictly adhere to the
     `[REQUIRED_OUTPUT_FORMAT]` for the main task."
 * **L. Examples (Few-Shot):** Integrate `[FEW_SHOT_EXAMPLES]` to
-    illustrate the expected outcome.
+    illustrate the expected outcome. If examples or samples are provided
+    in a language other than English, they MUST be explicitly noted as
+    such (e.g., "[Example in [Language Name]]").
 * **M. Final Self-Correction Check:** "Before concluding, perform a
     final self-correction check. Verify: 1. `[TASK_GOAL]` fully
     addressed? 2. Output matches `[REQUIRED_OUTPUT_FORMAT]`? 3. All
