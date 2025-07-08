@@ -164,12 +164,17 @@ by logically integrating the 'Key Elements' described below.
     illustrate the expected outcome. If examples or samples are provided
     in a language other than English, they MUST be explicitly noted as
     such (e.g., "[Example in [Language Name]]").
-* **N. Final Self-Correction Check:** "Before concluding, perform a
-    final self-correction check. Verify: 1. `[TASK_GOAL]` fully
-    addressed? 2. Output matches `[REQUIRED_OUTPUT_FORMAT]`? 3. All
-    constraints respected? 4. Response begins directly, avoiding
-    filler? 5. Entire response is in English? If the check passes, add
-    'Final Check: Passed.' at the very end."
+* **N. Final Self-Correction Check:** "Before concluding, perform a final
+    self-correction check. Verify the following:
+    1.  `[TASK_GOAL]` fully addressed?
+    2.  Output matches `[REQUIRED_OUTPUT_FORMAT]`?
+    3.  All constraints respected?
+    4.  Change Adherence: Have any changes been made other than those
+        explicitly requested by the user?
+    5.  Response begins directly, avoiding filler?
+    6.  Entire response is in English?
+
+    If the check passes, add 'Final Check: Passed.' at the very end."
 
 ---
 
