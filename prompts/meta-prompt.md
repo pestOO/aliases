@@ -88,7 +88,7 @@ by logically integrating the 'Key Elements' described below.
 
 1.  **Mandatory Formatting - Line Length Management:** Before wrapping
     the text in the final Markdown block, review it. For any line
-    longer than 70 characters, you **must** insert a hard line break
+    longer than 90 characters, you **must** insert a hard line break
     for readability. Replace any non-breaking spaces if the final prompt
     with normal spaces.
 2.  **Validate and Escape:** Ensure no characters within user-provided
