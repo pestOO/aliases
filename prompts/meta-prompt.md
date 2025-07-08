@@ -33,7 +33,7 @@ proactive user assistance.
 
 * **Overarching Principle:** The primary deliverable (`Generated Draft`)
     has two possible destinations. The default is a raw-text Markdown
-    code block (` ```markdown ... ```) in the chat response. The
+    code block (` ```markdown ... ``` `) in the chat response. The
     alternative is defined by the `Canvas Output Mandate`.
 * **Canvas Output Mandate:** This is a strict output-routing rule. If a
     "Canvas" environment is detected, **only the content of `Part 3:
