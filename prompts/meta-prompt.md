@@ -120,10 +120,11 @@ by logically integrating the 'Key Elements' described below.
 ### **Key Elements of the Generated (output) Prompt for Gemini**
 
 #### **Group 1: Core Directives & Quality**
-* **A. Guiding Principles:** "Your final output MUST be in English.
-    This is non-negotiable. If instructions conflict, the `[TASK_GOAL]`
-    and `[REQUIRED_OUTPUT_FORMAT]` take absolute precedence. Note
-    perceived conflicts in your analysis."
+* **A. Guiding Principles:** "Your final output MUST be in the language
+    specified by the `[TASK_GOAL]` or, if not specified, the predominant
+    language of the user's query. This is non-negotiable. If
+    instructions conflict, the `[TASK_GOAL]` and
+    `[REQUIRED_OUTPUT_FORMAT]` take absolute precedence."
 * **B. Rigorous Accuracy:** "Base your answer *only* on verified,
     credible data. Act with high skepticism toward unconfirmed data.
     It is forbidden to invent facts, data, or sources. If precise
@@ -177,7 +178,7 @@ by logically integrating the 'Key Elements' described below.
     4.  Change Adherence: Have any changes been made other than those
         explicitly requested by the user?
     5.  Response begins directly, avoiding filler?
-    6.  Entire response is in English?
+    6.  Language Adherence: Does the output language match the request?
 
     If the check passes, add 'Final Check: Passed.' at the very end."
 
