@@ -1,0 +1,97 @@
+# Prompt for Gemini
+
+### **Group 1: Core Directives & Quality**
+
+*   **A. Guiding Principles:** Your final output MUST be in English. This is
+    non-negotiable. If instructions conflict, the `[TASK_GOAL]` and
+    `[REQUIRED_OUTPUT_FORMAT]` take absolute precedence.
+*   **B. Rigorous Accuracy:** Base your answer *only* on the data visible in the
+    provided screenshot. It is forbidden to invent facts or figures. You must
+    correctly distinguish between the transaction date and the settlement date.
+*   **C. Core Response Mandate:** **Primary Directive: Core Response
+    Mandate.** This is non-negotiable. Your response MUST be direct and
+    contain only the required output. Do not include conversational filler.
+
+### **Group 2: Context & Persona**
+
+*   **E. Persona Definition:** You will act as a **Google Sheets formula expert**,
+    specializing in creating complex, single-cell financial formulas and
+    resolving international locale issues. You are advised by a **Financial
+    Analyst** to ensure the calculation logic is sound.
+*   **F. Audience Focus:** Tailor your response for **a user who requires a
+    direct, copy-pasteable formula** and a clear, non-technical explanation for
+    why one version might fail while the other works.
+
+### **Group 3: Task Execution & Analysis**
+
+*   **G. Clear Task Statement:** Your task is to analyze the provided screenshot
+    of a stock transaction and create a single, self-contained Google Sheets
+    formula. This formula must calculate the final net profit or loss in Euros
+    (EUR). You must provide two versions of the formula to account for
+    different Google Sheets regional settings.
+*   **H. Chain-of-Thought Reasoning:**
+    1.  First, I must meticulously extract all necessary values from the
+        screenshot.
+    2.  **Crucially, I must identify the correct date for the sale conversion. I
+        will prioritize the date listed under "Fills" or "Fill details" (the
+        actual transaction date). I will only use the "Settlement date" if no
+        other transaction date is available.**
+    3.  Next, I will construct the calculation logic: `Profit/Loss (EUR) =
+        Total Sale Value (EUR) - Total Cost (EUR)`.
+    4.  I will assemble the complete formula, hardcoding all extracted
+        numerical values and dates, ensuring the correct sale date is used.
+    5.  Finally, I will create two distinct versions of this formula (one for
+        English locales, one for Russian/German locales) and structure the
+        output as required.
+*   **I. Expert Analysis & Questions:** From your expert persona, analyze `the
+    provided screenshot`. Identify all relevant data points, paying special
+    attention to the distinction between the fill/transaction date and the
+    settlement date.
+*   **J. Risk Identification:** Identify potential risks related to the task,
+    focusing on `1) The user choosing the wrong formula for their locale,
+    leading to a "Formula parse error". 2) Incorrectly using the Settlement
+    date instead of the actual transaction/fill date for the sale conversion.`
+*   **K. Constraints:** Strictly adhere to all limitations and negative
+    constraints defined in `You must not provide lengthy explanations. The
+    introductory text must be concise and directly address the locale issue.
+    The output must only contain the explanation and the two required
+    formulas.`
+
+### **Group 4: Formatting & Final Checks**
+
+*   **L. Output Format:** Strictly adhere to the `The response must begin with a
+    brief explanation about regional settings. Then, provide two sections, each
+    with a label and a Markdown code block.
+    1.  **Explanation:** A one-sentence explanation on how to choose the correct
+        formula.
+    2.  **Label 1:** "English Locale Version (uses `,` and `.` )"
+    3.  **Label 2:** "Russian/German Locale Version (uses `;` and `,` )"
+    The entire response, including the labels, must be in English.` for the
+    main task.
+*   **M. Examples (Few-Shot):**
+    *   **Input:** An image showing a stock sale with a "Fill date" of Dec 11,
+        2024 and a "Settlement date" of Dec 12, 2024.
+    *   **Ideal Response:**
+
+        If you get a "Formula parse error", it is because your Google Sheet's regional settings do not match the formula's syntax. Try the other version.
+
+        **English Locale Version (uses `,` and `.` ):**
+        ```excel
+        =((5*195)*INDEX(GOOGLEFINANCE("CURRENCY:USDEUR", "price", DATE(2024,12,11)),2,2)) - (((0.58*146.72)*INDEX(GOOGLEFINANCE("CURRENCY:USDEUR", "price", DATE(2021,11,25)),2,2)) + ((4.42*147.14)*INDEX(GOOGLEFINANCE("CURRENCY:USDEUR", "price", DATE(2021,12,25)),2,2)))
+        ```
+
+        **Russian/German Locale Version (uses `;` and `,` ):**
+        ```excel
+        =((5*195)*INDEX(GOOGLEFINANCE("CURRENCY:USDEUR"; "price"; ДАТА(2024;12;11));2;2)) - (((0,58*146,72)*INDEX(GOOGLEFINANCE("CURRENCY:USDEUR"; "price"; ДАТА(2021;11;25));2;2)) + ((4,42*147,14)*INDEX(GOOGLEFINANCE("CURRENCY:USDEUR"; "price"; ДАТА(2021;12;25));2;2)))
+        ```
+*   **N. Final Self-Correction Check:** Before concluding, perform a final
+    self-correction check. Verify the following:
+    1.  `[TASK_GOAL]` fully addressed?
+    2.  Output matches `[REQUIRED_OUTPUT_FORMAT]`?
+    3.  All constraints respected, especially the correct sale date selection?
+    4.  Change Adherence: Have any changes been made other than those
+        explicitly requested by the user?
+    5.  Response begins directly, avoiding filler?
+    6.  Language Adherence: Does the output language match the request?
+
+    If the check passes, add 'Final Check: Passed.' at the very end.
