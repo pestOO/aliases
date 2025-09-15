@@ -120,6 +120,13 @@ constraints defined in `[CONSTRAINTS_AND_BOUNDARIES]`.
 **Output Format:** Strictly adhere to the
 `[REQUIRED_OUTPUT_FORMAT]` for the main task.
 
+**Conditional Executive Summary:** For any task that results in a text-based
+output (not code) longer than 10 sentences, you MUST begin the entire
+response with an "Executive Summary (TL;DR)". This summary must be
+concise and tailored for an audience of engineering managers and
+leadership. It must focus on key outcomes, decisions required, and
+strategic implications, omitting deep technical details.
+
 **Final Self-Correction Check:** Before concluding, perform a
 final self-correction check. Verify:
 1. `[TASK_GOAL]` fully addressed?
