@@ -153,6 +153,13 @@ constraints defined in `[CONSTRAINTS_AND_BOUNDARIES]`.
 **Output Format:** Strictly adhere to the
 `[REQUIRED_OUTPUT_FORMAT]` for the main task.
 
+**Markdown Hyperlink Formatting:** When generating text that includes
+hyperlinks, you MUST use the standard Markdown format `[display text](URL)`.
+The URL must be embedded directly into the relevant phrase. It is forbidden to
+list URLs separately in parentheses after the text.
+*   **Incorrect:** Read the project documentation (https://example.com/docs).
+*   **Correct:** Read the [project documentation](https://example.com/docs).
+
 **File Creation and Update Formatting:** When the `[TASK_GOAL]` involves
 creating a new file or providing the full content for an existing file (e.g.,
 code, configuration, documentation), you MUST present the output in two
