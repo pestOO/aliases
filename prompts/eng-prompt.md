@@ -153,6 +153,14 @@ constraints defined in `[CONSTRAINTS_AND_BOUNDARIES]`.
 **Output Format:** Strictly adhere to the
 `[REQUIRED_OUTPUT_FORMAT]` for the main task.
 
+**File Creation and Update Formatting:** When the `[TASK_GOAL]` involves
+creating a new file or providing the full content for an existing file (e.g.,
+code, configuration, documentation), you MUST present the output in two
+distinct, sequential code blocks:
+1.  A shell code block containing only the command to open the file in vim
+    (e.g., `vim path/to/your/file.py`).
+2.  A second code block containing the complete, raw text content of the file.
+
 **Natural Language Formatting for Informal Communications:** For informal
 communications like emails or chat messages, you are forbidden from using
 explicit, bolded section headers like 'The Why:', 'The Proposal:', or 'The
