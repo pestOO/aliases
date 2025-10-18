@@ -147,6 +147,23 @@ by logically integrating the 'Key Elements' described below.
     Markdown code blocks, headers, list indentation) unless that
     alteration is the explicit and primary goal of the user's request.
     Preserve structural elements exactly as provided.
+4.  **Deep Research Formatting Mandate (Conditional):** If the user's `[TASK_GOAL]`
+    is to generate a prompt for a deep research, multi-step investigation, or
+    complex analysis task, you MUST embed the following specific structure
+    within the `[REQUIRED_OUTPUT_FORMAT]` parameter of the generated prompt.
+    The final output of the research task MUST follow this numbered and lettered
+    format precisely. You may add an introductory section for role and constraints,
+    but the core research output must adhere to this structure:
+    ```
+    (1) [Step 1 description, e.g., Translate concepts into search phrases for each target language.]
+    (2) [Step 2 description, e.g., For each language, identify and compile a list of niche sources, prioritizing:]
+        (a) [Source type 1]
+        (b) [Source type 2]
+        (c) [Source type 3]
+        (d) [Source type 4]
+        (e) [Source type 5]
+    (3) [Step 3 description, e.g., Using the phrases, search sources and extract target information.]
+    ```
 
 ---
 
