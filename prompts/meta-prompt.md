@@ -149,21 +149,24 @@ by logically integrating the 'Key Elements' described below.
     Preserve structural elements exactly as provided.
 4.  **Deep Research Formatting Mandate (Conditional):** If the user's `[TASK_GOAL]`
     is to generate a prompt for a deep research, multi-step investigation, or
-    complex analysis task, you MUST embed the following specific structure
-    within the `[REQUIRED_OUTPUT_FORMAT]` parameter of the generated prompt.
-    The final output of the research task MUST follow this numbered and lettered
-    format precisely. You may add an introductory section for role and constraints,
-    but the core research output must adhere to this structure:
-    ```
-    (1) [Step 1 description, e.g., Translate concepts into search phrases for each target language.]
-    (2) [Step 2 description, e.g., For each language, identify and compile a list of niche sources, prioritizing:]
-        (a) [Source type 1]
-        (b) [Source type 2]
-        (c) [Source type 3]
-        (d) [Source type 4]
-        (e) [Source type 5]
-    (3) [Step 3 description, e.g., Using the phrases, search sources and extract target information.]
-    ```
+    complex analysis task, you MUST embed the following instructions within the
+    generated prompt:
+    *   **Clarification:** The prompt must first ask the user to specify the
+        search country and language, if not already provided. The default
+        language is English.
+    *   **Data Enrichment:** The prompt must enforce the principles of
+        `Actionable Data Enrichment (Key Element P)` for all findings.
+    *   **Output Structure:** The final output of the research task MUST follow
+        a precise numbered and lettered format. You may add an introductory
+        summary, but the core research output must adhere to this structure:
+        ```
+        (1) [Step 1 description, e.g., Translate concepts into search phrases for each target language.]
+        (2) [Step 2 description, e.g., For each language, identify and compile a list of niche sources, prioritizing:]
+            (a) [Source type 1]
+            (b) [Source type 2]
+            (c) [Source type 3]
+        (3) [Step 3 description, e.g., Using the phrases, search sources, extract target information, and enrich with actionable data.]
+        ```
 
 ---
 
@@ -231,6 +234,15 @@ by logically integrating the 'Key Elements' described below.
     6.  Language Adherence: Does the output language match the request?
 
     If the check passes, add 'Final Check: Passed.' at the very end."
+* **P. Actionable Data Enrichment:** "For research tasks, all results MUST be
+    enriched with actionable, context-specific data. This is non-negotiable.
+    *   **For physical locations (e.g., restaurants, stores, parks):**
+        You MUST include the official website link, operating hours, and a
+        direct Google Maps link to the location.
+    *   **For products or items (e.g., gadgets, books):** You MUST include
+        the estimated price, a summary of user reviews, and a direct link to a
+        major retailer (e.g., Amazon) or the official product page.
+    *   If this information is not available, you must explicitly state so."
 
 ---
 
@@ -252,6 +264,10 @@ by logically integrating the 'Key Elements' described below.
     Gemini to analyze.
 * **`[CONSTRAINTS_AND_BOUNDARIES]`**: (Optional) Non-negotiable limits
     or topics to exclude.
+* **`[SEARCH_COUNTRY]`**: (Optional) The specific country for the research.
+    If not provided, the generated prompt will ask the user for this.
+* **`[SEARCH_LANGUAGE]`**: (Optional, default: "English") The language for
+    the research. If not provided, the generated prompt will ask the user.
 * **`[INTERACTION_STYLE_FOR_ANALYSIS]`**: (Optional, default:
     `"integrated_single_response"`) Defines the response flow.
 * **`[CANVAS_RENDERING_MODE]`**: (Optional, default: "literal_markdown")
