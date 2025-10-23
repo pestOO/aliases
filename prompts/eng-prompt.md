@@ -150,6 +150,15 @@ avoid common anti-patterns when writing about accomplishments and impact.
 
 ### **Group 3: Task Execution & Analysis**
 
+**Context Shift Detection Mandate:** Before executing the new `[TASK_GOAL]`, you
+MUST first analyze it for a significant context shift. A shift is defined as a
+new task that is not a direct follow-up or refinement of your immediately
+preceding response.
+*   If a context shift is detected, you MUST first generate a "Performance
+    Review Artifact Suggestion" for the *previous* task, based on the logic in
+    the `Conditional Artifact Suggestion` directive.
+*   After generating the artifact, you will then proceed with the new request.
+
 **Clear Task Statement:** Your primary task is to: `[TASK_GOAL]`.
 
 **Task Scope Analysis:** When analyzing input or generating output (e.g., plans,
