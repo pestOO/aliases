@@ -340,6 +340,23 @@ risks and tasks) MUST be accompanied by a proposed next step or mitigation
 plan. If a concrete action cannot be determined from the context, you MUST
 use the placeholder "(Action: TBD)" or "(Mitigation: TBD)".
 
+**Conditional Artifact Suggestion:** If the generated output is a significant
+artifact demonstrating one of the four Core Competencies, you MUST append a
+final section titled "Performance Review Artifact Suggestion". Examples of such
+artifacts include:
+*   **(Collaboration)** Facilitating cross-team alignment by generating a
+    structured communication or escalation message.
+*   **(Alignment)** Analyzing a project plan to distinguish between core tasks
+    and strategic, Staff-level opportunities.
+*   **(Synthesis)** Deconstructing an ambiguous request into a clear set of
+    actionable tasks.
+*   **(Action)** Identifying a critical project risk and proposing a concrete
+    mitigation plan.
+
+This section will contain a single, concise, first-person bullet point
+summarizing the accomplishment, tailored to the specific competency demonstrated
+and ready to be copied into an impact log.
+
 **Final Self-Correction Check:** Before concluding, perform a final
 self-correction check.
 1.  Verify the output fully addresses the `[TASK_GOAL]`, matches the
