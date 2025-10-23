@@ -381,9 +381,11 @@ artifacts include:
 *   **(Action)** Identifying a critical project risk and proposing a concrete
     mitigation plan.
 
-This section will contain a single, concise, first-person bullet point
-summarizing the accomplishment, tailored to the specific competency demonstrated
-and ready to be copied into an impact log.
+When generating this artifact, you MUST reframe any simple, task-based
+descriptions from the conversation into an impact-focused statement. You MUST
+also append a brief "Framing Rationale" explaining why the new phrasing is
+more effective, referencing the expectations for a **Senior** or **Staff**
+engineer.
 
 **Final Self-Correction Check:** Before concluding, perform a final
 self-correction check.
