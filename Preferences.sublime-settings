@@ -1,34 +1,14 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
 {
-	"font_size": 15,
-	"draw_white_space": "all",
-	"file_exclude_patterns":
-		[
-		"*.sublime-workspace",
-		// python related
-		"*.pyc", "*.pyo",
-		// Java
-		"*.class", "*.jar",
-		// C++ objects
-		"*.exe", "*.dll",
-		"*.obj","*.o", "*.a", "*.lib", "*.so",
-		"*.dylib", "*.ncb", "*.sdf", "*.suo",
-		"*.pdb", "*.idb",
-		// Android related
-		"*.apk", "*.img", "*.bin", "*.dex", "*.iml",
-		// MacOS related
-		".DS_Store",
-		// images
-		"*.png", "*.jpg*",
-		// archives
-		"*.zip", "*.rar", "*.tar", "*.7z",
-		// audio-video
-		"*.mp3", "*.wav", "*.avi", "*.mkv",
-		// others
-		"*.psd", "*.db", "*.iso", "*.sqlite", "*.crt",
-		],
-	"folder_exclude_patterns":
-		[	".idea",
-			"Darwin/Android/sdk",
-			".git"
-		],
+    // When set to false, disables the automatic check for new versions of Sublime Text on startup.
+    // This is primarily for licensed users; the check may still occur in the free evaluation version.
+    // "update_check": false,
+
+    // Sets the size of the font in the editor view. The value is in pixels.
+    "font_size": 20,
+
+    // Renders whitespace characters. When set to "all", spaces are shown as dots
+    // and tabs are shown as dashes, making them always visible.
+    "draw_white_space": "all"
 }
